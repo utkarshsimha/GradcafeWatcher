@@ -89,7 +89,7 @@ def getResults( url, collegeList ):
         resList.append( resDict )
     
     if( os.path.exists('results.p') ):
-        prevTopRes = cPickle.load( open( 'results.p', 'rb' ) )[0]
+        prevTopRes = pickle.load( open( 'results.p', 'rb' ) )[0]
     else:
         prevTopRes = None
     updates = getUpdates( resList, prevTopRes )
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     stream = stream.replace(" ","+")
     url = "http://thegradcafe.com/survey/index.php?q={}".format( stream )
     while( True ):
-        time.sleep( interval )
         resList = getResults( url, collegeList )
-        cPickle.dump( resList, open( 'results.p','wb' ) )
+        pickle.dump( resList, open( 'results.p','wb' ) )
+        time.sleep( interval )
     
