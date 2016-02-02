@@ -11,4 +11,4 @@ ALL UPDATES ARE WRITTEN ONTO A FILE - update.txt
 
 Run the python script, in background and not associated with the terminal as :
 
-nohup python gradcafe_notifier.py & >& log.txt
+nohup python gradcafe_notifier.py &
