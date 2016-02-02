@@ -1,0 +1,4 @@
+requests
+beautifulsoup
+notify2
+#pync
